@@ -4,11 +4,11 @@
     display: flex;
 }
 
-/* -------------- Login page ----------------- */
+/* -------------- Register page ----------------- */
 
 /* Left part */
 
-.left-login {
+.left-register {
     width: 65vw;
     height: 100%;
     background: linear-gradient(180deg, #9172EC 0%, #1B2447 100%);
@@ -56,7 +56,7 @@
 
 /* Right part */
 
-.right-login {
+.right-register {
     width: 35vw;
     height: 100%;
     display: flex;
@@ -67,47 +67,59 @@
     width: 360px;
     height: auto;
 }
-.login-box-header {
+.register-box-header {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3px;
     margin-bottom: 30px;
 }
-.login-box-title {
+.register-box-title {
     font-size: 24px;
     font-weight: 600;
 }
-.login-box-content {
+.register-box-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
-.login-input-box {
+.register-input-box {
     position: relative;
     margin: 5px 0;
 }
-.login-box-input {
+.register-box-input {
     width: 100%;
     padding: 18px 16px 18px 50px;
     border: 1px solid lightgray;
     border-radius: 30px;
 }
-.login-box-icons {
+.register-box-icons {
     position: absolute;
     top: 14px;
     left: 16px;
     color: gray;
     font-size: 22px;
 }
-.login-btn {
+.register-btn {
     width: 100%;
     padding: 16px 20px;
     font-size: 16px;
     color: white;
     background: #9172EC;
     margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.read-more-btn {
+    width: 200px;
+    padding: 12px 18px;
+    font-size: 16px;
+    color: white;
+    background: #9172EC;
+    margin: 20px 0;
     border: none;
     outline: none;
     border-radius: 30px;
