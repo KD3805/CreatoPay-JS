@@ -9,12 +9,20 @@ const Register = () => {
     const [data, setData] = useState({
         email: "",
         password: "",
-        fullName: ""
+        fullName: "",
     });
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Data:", data);
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
     };
 
     return (
@@ -54,8 +62,9 @@ const Register = () => {
                                 type="text"
                                 placeholder="Full Name"
                                 className="register-box-input"
+                                name="fullName"
                                 value={data.fullName}
-                                onChange={(e) => setData({ ...data, fullName: e.target.value })}
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -65,8 +74,9 @@ const Register = () => {
                                 type="text"
                                 placeholder="Email Address"
                                 className="register-box-input"
+                                name="email"
                                 value={data.email}
-                                onChange={(e) => setData({ ...data, email: e.target.value })}
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -76,8 +86,9 @@ const Register = () => {
                                 type="password"
                                 placeholder="Password"
                                 className="register-box-input"
+                                name="password"
                                 value={data.password}
-                                onChange={(e) => setData({ ...data, password: e.target.value })}
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -96,7 +107,6 @@ const Register = () => {
                                 Register
                             </button>
                         </div>
-
                     </form>
                 </div>
             </div>

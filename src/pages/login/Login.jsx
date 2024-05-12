@@ -15,6 +15,14 @@ const Login = () => {
     console.log("Data:", data);
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <main className="main">
       <div className="left-login">
@@ -47,8 +55,9 @@ const Login = () => {
                 type="text"
                 placeholder="Email Address"
                 className="login-box-input"
+                name="email"
                 value={data.email}
-                onChange={(e) => setData({ ...data, email: e.target.value })}
+                onChange={handleChange}
               />
             </div>
 
@@ -58,8 +67,9 @@ const Login = () => {
                 type="password"
                 placeholder="Password"
                 className="login-box-input"
+                name="password"
                 value={data.password}
-                onChange={(e) => setData({ ...data, password: e.target.value })}
+                onChange={handleChange}
               />
             </div>
 
